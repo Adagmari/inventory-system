@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inventario</title>
+    <link rel="stylesheet" href="../pages/register/registerPage.css">
+</head>
+<body>
+    <h1>Formulario de Registro de Producto</h1>
+    <div class="container mt-5">
+        <form id="registerForm">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="sku">SKU:</label>
+                                <input type="text" class="form-control" id="sku" name="product_SKU" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="productColor">Color del Producto:</label>
+                                <input type="color" class="form-control" id="productColor" name="product_color" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productName">Nombre del Producto:</label>
+                        <input type="text" class="form-control" id="productName" name="product_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productDescription">Descripción del Producto:</label>
+                        <textarea class="form-control" id="productDescription" name="product_description" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="productState" name="product_state" checked>
+                            <label class="form-check-label" for="productState">
+                                Estado del Producto (Activo)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="productImage">Imagen del Producto:</label>
+                        <input type="file" class="form-control-file" id="productImage" name="product_image" accept="image/*" onchange="previewImage(this)">
+                        <small class="form-text text-muted">Selecciona una imagen para tu producto.</small>
+                    </div>
+                    <div class="form-group imageProduct">
+                        <img src="../../resources/img/backgroundImage.jpg"id="imagePreview" class="img-fluid" alt="Vista previa de la imagen">
+                    </div>
+                </div>
+            </div>
+            <div class="btn-register-update">
+                <button type="submit" class="btn btn-primary " id="submitButton" disabled onclick="registerProduct()">Registrar Producto</button>
+            </div>
+            
+        </form>
+    </div>
+
+
+    <!--<script src='services/productService.js'></script>
+    <script src='pages/main/mainPage.js'></script>-->
+    <script src='pages/register/registerPage.js'></script>
+</body>
+</html>
+
+
+<!--<button type="submit">Registrar Producto</button>-->

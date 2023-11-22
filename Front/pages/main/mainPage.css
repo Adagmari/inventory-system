@@ -1,0 +1,89 @@
+.cardHeader{
+    align-items: center;
+    margin-top: 0;
+    padding-top: 2%;
+    margin-bottom:0;
+    padding-bottom: 1%;
+    max-height: auto;
+    /*width: 100%;*/
+}
+h1{
+    display: grid;
+    place-content: center;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    padding: 0;
+    font-size: 2em;
+}
+.card-title{
+    display: grid;
+    place-content: center;
+    font-size: 1em;
+}
+.card-SKU{
+    font-style: italic;
+    font-size: 0.7em;
+    text-align: center;
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+.card-text{
+    max-width: 100%; 
+    max-height: 50px; 
+    height: 50px;
+}
+.card{
+    margin-top: 0%;
+
+}
+
+ 
+.image {
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.image img {
+    max-width: 100%; 
+    max-height: 200px; 
+    height: 200px;
+    object-fit: cover; 
+}
+.descriptionImage{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 1.5s ease;
+}
+.textDescription{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.image:hover .descriptionImage{
+    opacity: 1;
+}
+.card-color-state{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 0.8em;
+}
+.imageProduct img{
+    max-width: 250px;
+    max-height: 250px;
+}
+

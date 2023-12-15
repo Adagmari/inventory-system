@@ -52,17 +52,7 @@ function registerProduct() {
     
 }
 
-$(document).ready(function () {
-    $("#registerForm input, #registerForm textarea, #registerForm select  #registerForm file").on("input change", checkForm);
 
-    function checkForm() {
-        var allFieldsFilled = true;
-        $("#registerForm input, #registerForm textarea, #registerForm select  #registerForm file").each(function () {
-            if ($(this).prop("required") && $(this).val().trim() === ""|| ($(this).is('input[type="file"]') && $(this).get(0).files.length === 0)) {
-                allFieldsFilled = false;
-                return false;
-            }
-        });
-        $("#submitButton").prop("disabled", !allFieldsFilled);
-    }
+$(document).ready(function () {
+    
 });

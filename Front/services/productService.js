@@ -1,7 +1,10 @@
 class ProductService {
-  baseURL = "http://localhost/Back-Inventario/back/api/product_ws.php";  
+
+  base=window.baseURL;
+  server = this.base +"/back/api/product_ws.php";
+  //baseURL = "http://localhost/Back-Inventario/back/api/product_ws.php";  
     async getProducts() {
-      const response = await fetch(`${this.baseURL}`, {
+      const response = await fetch(`${this.server}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -17,7 +20,7 @@ class ProductService {
     async getProductsByData(productData){
 
       const response = await $.ajax({
-        url: `${this.baseURL}`, // Reemplaza con la ruta correcta a tu archivo PHP
+        url: `${this.server}`, // Reemplaza con la ruta correcta a tu archivo PHP
         type: 'GET',
         data: { data: productData }, // Pasa el dato de búsqueda como parámetro
         dataType: 'json',
@@ -31,7 +34,7 @@ class ProductService {
     }
   
     async createProduct(productData) {
-      const response = await fetch(`${this.baseURL}`, {
+      const response = await fetch(`${this.server}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -47,7 +50,7 @@ class ProductService {
     }
     
     async updateProduct(productData) {
-      const response = await fetch(`${this.baseURL}`, {
+      const response = await fetch(`${this.server}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
